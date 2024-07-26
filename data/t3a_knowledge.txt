@@ -1,0 +1,236 @@
+
+Descrição da empresa,  sua missão e valores:
+
+Descrição da T3A:
+A T3A, liderada pelos CEOs Fernando Gusmão e João Victor Trindade, é a maior empresa de automação por inteligência artificial do Brasil. Estamos dedicados a impulsionar empresas de todos os portes em direção ao crescimento exponencial e à lucratividade sólida. Contamos com uma equipe altamente qualificada de gestores, programadores e engenheiros de software, prontos para oferecer soluções de última geração que otimizam os sistemas operacionais e geram eficiência dentro do seu modelo de negócios. Nossa visão é moldar e criar um futuro com inovação e compromisso, superando desafios que outros consideravam impossíveis.
+
+A T3A é uma empresa que conta com automações em todas as suas áreas empresariais. Por isso, nosso custo com empregados é baixo. Dessa forma, acreditamos que qualquer empresa pode prosperar reduzindo seus custos com automações inteligentes.
+
+A Inteligência Artificial é o futuro. Cedo ou tarde, todas as empresas do Brasil e do mundo terão automações em todas as suas áreas. A T3A está a frente de seu tempo e queremos que nossos clientes também estejam. Ao implementar automações por IA com a T3A, nossos clientes possuirão um grande diferencial competitivo no mercado. Além disso sua eficiência e produtividade aumentarão exponencialmente. 
+
+Valores da T3A:
+Desapego aos resultados/frutos da ação: 
+Entendemos que o processo é tão importante quanto o resultado e nos concentramos em fazer o melhor trabalho possível, independentemente dos resultados imediatos.
+
+Inovação na forma de pensar, analisar e tomar decisões:
+Buscamos constantemente o avanço tecnológico e a inovação em nossa abordagem.
+
+Honestidade e transparência em qualquer circunstância: 
+Acreditamos na honestidade como base de todas as nossas relações comerciais.
+
+Comunicação aberta e feedback construtivo: 
+Valorizamos a comunicação aberta e a troca de ideias para encontrar soluções eficazes.
+
+Respeito e racionalidade nas relações de trabalho: 
+Promovemos um ambiente de trabalho respeitoso e colaborativo.
+
+Responsabilidade e compromisso:
+Cada membro da nossa equipe é responsável pelas suas decisões e pelo sucesso da empresa.
+
+Integridade com a palavra: 
+Cumprimos nossos compromissos e mantemos nossas promessas.
+
+Foco no cliente (customer obsession): 
+Priorizamos a satisfação do cliente e buscamos impactar positivamente o maior número de vidas possível.
+
+Excelência:
+ Buscamos a excelência em todos os processos e estamos sempre melhorando.
+
+Agilidade, eficiência e alta produtividade: 
+Somos ágeis, eficientes e altamente produtivos em tudo o que fazemos.
+
+Foco em resultado:
+Definimos metas claras e tangíveis e trabalhamos incansavelmente para alcançá-las.
+
+Qualidade de vida: 
+Promovemos um equilíbrio saudável entre trabalho produtivo e uma vida saudável.
+
+Foco no trabalho: 
+Dedicamos nossa atenção e esforços para realizar o melhor trabalho possível.
+
+
+Missão da T3A:
+Nossa missão na T3A é capacitar nossos clientes a atingirem seu máximo potencial por meio da inteligência artificial. Estamos comprometidos em fornecer soluções tecnológicas de vanguarda, cultivar relacionamentos baseados na confiança e na transparência, e continuar a crescer como líderes na indústria de automação por IA na América Latina. Queremos ser o parceiro de escolha para empresas que buscam inovação, eficiência e sucesso duradouro. Junte-se a nós agora mesmo nessa jornada de mais sucesso, previsibilidade e expansão contínua, impulsionada pelo poder da IA.
+
+
+História e evolução da empresa.
+Iniciada em 2023, a T3A começou seus serviços em busca de resolver problemas empresariais, otimizando serviços e escalando negócios com o uso de inteligência artificial. Desde então ela vem crescendo sendo a pioneira em automação por IA’s na América Latina.
+
+
+Equipe de liderança e especializações.
+Os funadores João Victor Trindade e Fernando Gusmão lideram uma equipe de programadores e gestores de negócios digitais.
+
+
+Serviços e Soluções:
+Sistemas de Automação por IA:
+Desenvolvemos automações avançadas para processar dados não estruturados e realizar tarefas complexas com programações de ponta.
+
+Agentes de Atendimento Virtual:
+Criamos IA’ S com personalidade e comunicação idênticos ao do empreendedor, facilitando processos burocráticos e fornecendo atendimento 24/7 aos clientes.
+
+Consultorias Personalizadas:
+Analisamos todo o seu modelo de negócio e recomendamos as melhores ferramentas de otimização aliadas a uma oferta irrecusável e funis de vendas estruturados.
+
+Prompt Engineering:
+Otimizamos a interação humano-máquina, estabelecendo comandos e instruções de forma clara e precisa a fim de obter resultados e respostas relevantes.
+
+Análise Sofisticada de Dados:
+Extraímos insights e dados profundos dos nossos clientes empregando algoritmos e IA’ s para identificar padrões, tendências e oportunidades.
+
+Desenvolvimento em Deep Learning:
+Auxiliamos empresas de médio/grande porte a adquirir expertise em aprendizado de máquinas e deep learning.
+
+
+FAQs (Perguntas Frequentes):
+O que a T3A faz exatamente?
+A T3A oferece serviços para automatizar processos empresariais com o uso de inteligências artificiais, disponibilizando uma opção mais óptima e potencializadora para o seu negócio.
+
+Quais são os benefícios de utilizar automações por inteligência artificial em meu negócio?
+Além de diminuir os gastos excessivos com funcionários, você garante uma melhor execução de processos e ainda agrega mais valor a sua companhia.
+
+
+Quais setores ou tipos de negócios vocês atendem?
+Atendemos os nichos de empresários que vendem produtos/serviços de alto valor, setor imobiliário, judicial e agências de marketing digital. Fornecemos diferentes tipos de automações avançadas para cada um desses mercados.
+
+
+
+Quais tecnologias de IA a T3A utiliza em seus projetos?
+Aprendizado de Máquina (Machine Learning), Redes Neurais Artificiais (ANNs), Processamento de Linguagem Natural (NLP) e Reforço de Aprendizado (Reinforcement Learning). Abastecido por LLM.
+
+Qual é a visão de longo prazo da T3A para o futuro?
+Tornar-se uma força global líder em soluções de inteligência artificial, impulsionando a transformação digital e a inovação em todos os setores, enquanto promovemos valores sólidos e aprimoramos a qualidade de vida das pessoas em todo o mundo.
+
+Vocês oferecem suporte contínuo após a implementação das soluções?
+Sim, na T3A, valorizamos o relacionamento contínuo com nossos clientes e estamos comprometidos em fornecer suporte de alta qualidade após a implementação das soluções de inteligência artificial. Nosso objetivo é garantir que nossos clientes obtenham o máximo valor de nossas soluções e que suas necessidades em constante evolução sejam atendidas. 
+
+Link do site da T3A: https://t3a.ai 
+Instagram da T3A: https://instagram.com/t3a.ai   
+E-mail de contato da T3A: t3acontact@gmail.com
+
+Exemplos de Agentes IA que vendemos:
+- Agente de Atendimento ao cliente e captação de Lead em seu site.
+- Agente de atendimento no Whatsapp
+- Qualquer automação de tarefas repetitivas, podendo incluir uma rede de Agentes interagindo entre si em formato hierárquico.
+- Agente de Copywriting( Escrita persuasiva)
+- Agente de informações internas da empresa
+- Agente criador de Newsletter
+- Agente transcritor de áudio em texto
+- Agente de emails automáticos
+- Infinitas possibilidades, de acordo com as demandas personalizadas das empresas.
+
+O que é Engenharia de Prompt?
+Instruir uma IA a realizar uma tarefa.
+Melhor entendimento = melhor respostas
+
+Os Fundadores da T3A são o João Victor Trindade e o Fernando Gusmão.
+
+Agente IA de Atendimento ( Nome: Trinity) T3A
+Características:
+
+Nome: Agente IA de Atendimento T3A
+Tipo: Agente de Atendimento ao Cliente
+Tecnologia: Custom GPTs (Inteligência Artificial Específica)
+Disponibilidade: 24/7, incluindo feriados
+Linguagem de Programação: Python
+Integração: Fácil integração com qualquer canal de vendas/comunicação
+Funcionalidades:
+
+Atendimento ao Cliente: Responde perguntas e resolve problemas dos clientes.
+Automação de Respostas: Fornece respostas automatizadas para consultas repetitivas.
+Personalização de Interações: Interações intuitivas e personalizadas com clientes.
+Aumento de Conversão de Vendas: Melhora a comunicação nos canais de atendimento, aumentando a conversão de vendas.
+Economia de Tempo: Libera tempo para a gestão estratégica da empresa.
+Redução de Volume de Suporte: Diminui o número de consultas ao suporte.
+Proteção de Dados: Garante a segurança e privacidade das informações dos clientes.
+Benefícios:
+
+Atendimento Hiper-Inteligente: Oferece um serviço de alta inteligência artificial.
+Disponibilidade Ininterrupta: Disponível 24 horas por dia, 7 dias por semana, incluindo feriados.
+Economia Financeira: Reduz custos operacionais em comparação com atendentes humanos.
+Eficiência Operacional: Aumenta a eficiência das operações de atendimento.
+Satisfação do Cliente: Melhora a satisfação dos clientes com atendimento rápido e preciso.
+Redução de Consultas Repetitivas: Minimiza o número de perguntas repetitivas.
+Legalidade: Evita problemas legais relacionados a ações trabalhistas.
+Mercado-Alvo:
+
+E-commerce: Empresas que vendem produtos ou serviços online.
+Serviços Financeiros: Bancos, seguradoras, fintechs.
+Saúde: Clínicas, hospitais, telemedicina.
+Educação: Escolas, universidades, plataformas de ensino online.
+Turismo e Hospitalidade: Hotéis, agências de viagem, plataformas de reservas.
+Pequenas e Médias Empresas (PMEs): Empresas de pequeno e médio porte em diversos setores.
+Grandes Corporações: Empresas de grande porte em diversos setores.
+Diferenciais Competitivos:
+
+Atendimento Hiper-Inteligente: Serviço de atendimento altamente inteligente.
+Disponibilidade 24/7: Atendimento contínuo, sem interrupções.
+Economia de Tempo e Recursos: Reduz a necessidade de recursos humanos e economiza tempo para outras atividades.
+Proteção de Dados: Segurança e privacidade dos dados dos clientes garantidas.
+Fácil Integração: Integração simples com sistemas existentes.
+Soluções Customizadas: Soluções adaptáveis às necessidades específicas dos clientes.
+Experiência em Engenharia de Prompt: Alta capacidade de resolver problemas complexos com prompts de IA avançados.
+Principais Dores que a Nossa Solução Resolve:
+
+Redução do Volume de Suporte:
+Problema: Sobrecarga de consultas repetitivas e triviais, custos elevados com equipes robustas, dores de cabeça com atendimento no WhatsApp.
+Solução: Automação de respostas para perguntas comuns, redução de custos com pessoal, atendimento 24/7.
+Aumento da Qualificação de Leads e Conversão de Vendas:
+Problema: Dificuldade em guiar clientes através do processo de compra, baixo índice de conversão.
+Solução: IA orienta clientes durante o processo de compra, aumentando a conversão e impulsionando o crescimento das receitas.
+Melhora da Satisfação do Cliente:
+Problema: Clientes insatisfeitos com tempo de resposta e qualidade do atendimento.
+Solução: Respostas rápidas e precisas 24/7, garantindo que os clientes se sintam valorizados e apoiados em cada etapa de sua jornada de compra, promovendo a fidelidade e o boca a boca positivo.
+Redução de Consultas Repetitivas:
+Problema: Alta carga de trabalho para a equipe de suporte com perguntas comuns.
+Solução: Automação de respostas para consultas frequentes, permitindo que a equipe se concentre em questões mais complexas e estratégicas, resultando em uma operação mais eficiente e uma melhor experiência para o cliente.
+Oferta Milionária - Agente IA de Atendimento T3A:
+
+Promessa: Revolucione o atendimento ao cliente com o Agente IA da T3A e veja uma redução impressionante de até 70% nos seus custos operacionais em apenas 180 dias. Proporcione aos seus clientes um suporte hiper-inteligente, rápido e altamente eficiente, elevando a experiência do cliente a um novo patamar.
+Atendimento 24/7: Garantimos que os clientes recebam suporte a qualquer hora do dia.
+Redução de Custos: A IA reduz os custos operacionais em comparação com o atendimento humano.
+Qualificação de Leads: Temos a eficiência na captura e qualificação de leads, aumentando a conversão de vendas.
+Personalização do Atendimento: Oferecer um atendimento personalizado que se adapta às necessidades específicas de cada cliente.
+Análise e Relatórios: Fornecer insights valiosos através de relatórios detalhados e análise de dados.
+Escalabilidade: Capacidade de crescer junto com a demanda da empresa sem perda de qualidade no atendimento.
+
+Processo de Onboarding. O que o cliente precisa fazer após a compra do Agente de Atendimento: 
+4 passos para a implementação
+Para ter sua IA de atendimento personalizada dentro do seu Whatsapp, site institucional ou ambos, basta seguir os seguintes passos
+
+1- Após a confirmação da compra, o cliente será direcionado para a página de Onboarding e entrará em contato direto com nossa equipe de especialistas. 
+
+2- Fornecer informações relevantes sobre seu negócio para serem utilizadas como base de conhecimento para a IA*
+
+Caso a integração seja no Whatsapp:
+
+3- Disponibilizar um portfólio empresarial Meta (Facebook Business Manager) ativo**
+
+4- Disponibilizar um número novo do WhatsApp Business para utilização do serviço***
+
+
+
+(*Treinaremos minuciosamente a IA a partiridas informações dadas, proporcionando um atendimento altamente personalizado e preciso.)
+
+(**Caso necessário, a equipe da T3A oferecerá, a parte, uma conta do Facebook pronta para uso)
+
+(***Caso necessário, a equipe T3A pode fornecer um chip virtual incluso com DDD 11 ou 21 para utilização da IA de Atendimento por Whatsapp)
+
+Esse processo de implementação é apenas para o de atendimento trinity. Os demais produtos tem diferenets métodos de Onboarding.
+
+
+Agente IA Consultor de negócios:
+
+Este agente é um consultor de negócios altamente qualificado e especializado em consultoria de negócios, gestão empresarial avançada e fornecimento de conselhos estratégicos. Este agente possui Conhecimento Aplicado e Especializado de: Alex Hormozi, Iman Gadzhi, Elon Musk, Jeff Bezos, Warren Buffet , Charlie Munger, Flavio Augusto, Steve Jobs. Assim, o cliente tem acesso a consultorias ilimitadas com os maiores nomes do empreendedorismo mundial. 
+
+Onboarding:
+Após a confirmação da compra, você será redirecionado para nossa equipe de especialistas no Whatsapp, onde escolherá se deseja o consultor no seu Whatsapp ou em uma Landing Page protegida por senha. Ao escolher, você receberá o Agente em até 48 horas.
+
+Agente IA Copywriter:
+
+Escreve as copys mais persuasivas do mercado em 4 segundos, sempre que o cliente quiser. É especialista na criação de Newsletters que engajam com seu cliente. 
+Onboarding
+Após a confirmação da compra, você será redirecionado para nossa equipe de especialistas no Whatsapp, onde escolherá se deseja o consultor no seu Whatsapp ou em uma Landing Page protegida por senha. Ao escolher, você receberá o Agente em até 48 horas.
+
+Amigo Eterno IA:
+
+Amigo Eterno, um assistente de IA avançado, desenvolvido especialmente para ajudar idosos a se sentirem felizes. Sua principal qualidade é a capacidade de entender profundamente as necessidades emocionais e práticas dos idosos, oferecendo carinho, apoio, conselhos e sugestões personalizadas utilizando técnicas de psicologia e bem-estar.

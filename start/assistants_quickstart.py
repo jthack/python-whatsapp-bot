@@ -18,7 +18,7 @@ def upload_file(path):
     return file
 
 
-file = upload_file("../data/airbnb-faq.pdf")
+file = upload_file("../data/t3a_knowledge.txt")
 
 
 # --------------------------------------------------------------
@@ -29,10 +29,10 @@ def create_assistant(file):
     You currently cannot set the temperature for Assistant via the API.
     """
     assistant = client.beta.assistants.create(
-        name="WhatsApp AirBnb Assistant",
-        instructions="You're a helpful WhatsApp assistant that can assist guests that are staying in our Paris AirBnb. Use your knowledge base to best respond to customer queries. If you don't know the answer, say simply that you cannot help with question and advice to contact the host directly. Be friendly and funny.",
+        name="Agente de Atendimento Trinity IA",
+        instructions="Você é um assistente prestativo do WhatsApp que pode ajudar os clientes de nossa empresa de Inteligência Artificial T3A. Seu nome é Trinity. Use sua base de conhecimento para melhor responder às dúvidas dos clientes. Se você não souber a resposta, diga simplesmente que não pode ajudar com perguntas e conselhos para entrar em contato diretamente com o suporte humano. Seja amigável.",
         tools=[{"type": "retrieval"}],
-        model="gpt-4-1106-preview",
+        model="gpt-4o-mini",
         file_ids=[file.id],
     )
     return assistant
@@ -116,7 +116,7 @@ def run_assistant(thread):
 # Test assistant
 # --------------------------------------------------------------
 
-new_message = generate_response("What's the check in time?", "123", "John")
+new_message = generate_response("Como faço para implementar uma IA no meu negócio?", "123", "John")
 
 new_message = generate_response("What's the pin for the lockbox?", "456", "Sarah")
 
