@@ -2,16 +2,16 @@ import logging
 from flask import current_app, jsonify
 import json
 import requests
-
-from app.services.openai_service import generate_response
+import whisper
 import re
+from app.services.openai_service import generate_response
 
+model = whisper.load_model("base")  # Load the Whisper model
 
 def log_http_response(response):
     logging.info(f"Status: {response.status_code}")
     logging.info(f"Content-type: {response.headers.get('content-type')}")
     logging.info(f"Body: {response.text}")
-
 
 def get_text_message_input(recipient, text):
     return json.dumps(
@@ -23,7 +23,6 @@ def get_text_message_input(recipient, text):
             "text": {"preview_url": False, "body": text},
         }
     )
-
 
 def send_message(data):
     headers = {
@@ -51,7 +50,6 @@ def send_message(data):
         log_http_response(response)
         return response
 
-
 def process_text_for_whatsapp(text):
     # Remove brackets
     pattern = r"\【.*?\】"
@@ -69,7 +67,6 @@ def process_text_for_whatsapp(text):
 
     return whatsapp_style_text
 
-
 def process_whatsapp_message(body):
     wa_id = body["entry"][0]["changes"][0]["value"]["contacts"][0]["wa_id"]
     name = body["entry"][0]["changes"][0]["value"]["contacts"][0]["profile"]["name"]
@@ -85,6 +82,37 @@ def process_whatsapp_message(body):
     data = get_text_message_input(wa_id, response)
     send_message(data)
 
+def process_whatsapp_audio_message(body):
+    wa_id = body["entry"][0]["changes"][0]["value"]["contacts"][0]["wa_id"]
+    name = body["entry"][0]["changes"][0]["value"]["contacts"][0]["profile"]["name"]
+
+    message = body["entry"][0]["changes"][0]["value"]["messages"][0]
+    audio_url = message["audio"]["url"]
+
+    # Download the audio file
+    audio_path = download_audio_file(audio_url)
+
+    # Transcribe the audio file using Whisper
+    transcription = transcribe_audio_file(audio_path)
+
+    # Generate a response using GPT-4
+    response = generate_response(transcription, wa_id, name)
+    response = process_text_for_whatsapp(response)
+
+    # Send the response back to the sender
+    data = get_text_message_input(wa_id, response)
+    send_message(data)
+
+def download_audio_file(url):
+    response = requests.get(url)
+    audio_path = "audio.ogg"
+    with open(audio_path, 'wb') as f:
+        f.write(response.content)
+    return audio_path
+
+def transcribe_audio_file(audio_path):
+    result = model.transcribe(audio_path)
+    return result['text']
 
 def is_valid_whatsapp_message(body):
     """

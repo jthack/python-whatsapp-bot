@@ -6,6 +6,7 @@ from flask import Blueprint, request, jsonify, current_app
 from .decorators.security import signature_required
 from .utils.whatsapp_utils import (
     process_whatsapp_message,
+    process_whatsapp_audio_message,  # Import the audio message handler
     is_valid_whatsapp_message,
 )
 
@@ -41,7 +42,13 @@ def handle_message():
 
     try:
         if is_valid_whatsapp_message(body):
-            process_whatsapp_message(body)
+            message_type = body['entry'][0]['changes'][0]['value']['messages'][0]['type']
+            
+            if message_type == 'text':
+                process_whatsapp_message(body)
+            elif message_type == 'audio':
+                process_whatsapp_audio_message(body)
+                
             return jsonify({"status": "ok"}), 200
         else:
             # if the request is not a WhatsApp API event, return an error
@@ -54,7 +61,7 @@ def handle_message():
         return jsonify({"status": "error", "message": "Invalid JSON provided"}), 400
 
 
-# Required webhook verifictaion for WhatsApp
+# Required webhook verification for WhatsApp
 def verify():
     # Parse params from the webhook verification request
     mode = request.args.get("hub.mode")
@@ -85,5 +92,3 @@ def webhook_get():
 @signature_required
 def webhook_post():
     return handle_message()
-
-

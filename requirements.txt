@@ -3,3 +3,7 @@ python-dotenv
 openai
 aiohttp
 requests
+openai-whisper
+torch
+torchvision
+torchaudio
