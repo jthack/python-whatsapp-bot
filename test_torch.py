@@ -1,3 +1,7 @@
+import sys
+print(f"Python executable: {sys.executable}")
+print(f"Python version: {sys.version}")
+
 import torch
 
 def test_torch():

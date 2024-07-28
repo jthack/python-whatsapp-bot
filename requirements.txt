@@ -7,3 +7,5 @@ openai-whisper
 torch
 torchvision
 torchaudio
+ffmpeg
+ffmpeg-python
