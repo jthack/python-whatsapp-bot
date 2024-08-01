@@ -12,13 +12,13 @@ client = OpenAI(api_key=OPEN_AI_API_KEY)
 # --------------------------------------------------------------
 # Upload file
 # --------------------------------------------------------------
-def upload_file(path):
-    # Upload a file with an "assistants" purpose
-    file = client.files.create(file=open(path, "rb"), purpose="assistants")
-    return file
+# def upload_file(path):
+#     # Upload a file with an "assistants" purpose
+#     file = client.files.create(file=open(path, "rb"), purpose="assistants")
+#     return file
 
 
-file = upload_file("../data/t3a_knowledge.txt")
+# file = upload_file("../data/t3a_knowledge.txt")
 
 
 # --------------------------------------------------------------
@@ -29,16 +29,17 @@ def create_assistant(file):
     You currently cannot set the temperature for Assistant via the API.
     """
     assistant = client.beta.assistants.create(
-        name="Agente de Atendimento Trinity IA",
-        instructions="Você é um assistente prestativo do WhatsApp que pode ajudar os clientes de nossa empresa de Inteligência Artificial T3A. Seu nome é Trinity. Use sua base de conhecimento para melhor responder às dúvidas dos clientes. Se você não souber a resposta, diga simplesmente que não pode ajudar com perguntas e conselhos para entrar em contato diretamente com o suporte humano. Seja amigável.",
-        tools=[{"type": "retrieval"}],
+        name="Zowobo",
+        instructions="Zowobo is a WhatsApp assistant designed to give Haitians access to AI technology. It can listen to voice messages and respond in Haitian Creole. Zowobo is here to answer questions, provide information, and help with various issues. If there's something it doesn't know, it will clearly say so and suggest seeking help elsewhere. Zowobo always tries to give simple, useful, and easy-to-understand responses. It has a bit of a sense of humor too, but its main goal is to help Haitians access knowledge and information through AI technology. Zowobo responds to haitian creole with haitian creole and responds to english with english. Most requests will be in Haitian creole. Zowobo se yon asistan WhatsApp ki la pou ede Ayisyen yo jwenn aksè ak teknoloji AI. Li kapab tande mesaj vwa epi reponn yo nan lang kreyòl ayisyen. Zowobo la pou reponn kesyon, bay enfòmasyon, epi ede ak divès kalite pwoblèm. Si gen yon bagay li pa konnen, l ap di sa klè epi sijere moun nan chèche èd lòt kote. Zowobo toujou ap eseye bay repons ki senp, itil, epi ki fasil pou konprann. Li gen yon ti sans imou tou, men prensipal objektif li se ede Ayisyen yo jwenn aksè ak konesans ak enfòmasyon atravè teknoloji AI.",
+        # tools=[{"type": "retrieval"}],
         model="gpt-4o-mini",
-        file_ids=[file.id],
+        # file_ids=[file.id],
     )
     return assistant
 
-
-assistant = create_assistant(file)
+# file = ""
+# assistant = create_assistant(file)
+# print(assistant.id)
 
 
 # --------------------------------------------------------------
@@ -57,7 +58,7 @@ def store_thread(wa_id, thread_id):
 # --------------------------------------------------------------
 # Generate response
 # --------------------------------------------------------------
-def generate_response(message_body, wa_id, name):
+def generate_response(message_body, wa_id, name, assistant_id):
     # Check if there is already a thread_id for the wa_id
     thread_id = check_if_thread_exists(wa_id)
 
@@ -81,7 +82,7 @@ def generate_response(message_body, wa_id, name):
     )
 
     # Run the assistant and get the new message
-    new_message = run_assistant(thread)
+    new_message = run_assistant(thread, assistant_id)
     print(f"To {name}:", new_message)
     return new_message
 
@@ -89,21 +90,25 @@ def generate_response(message_body, wa_id, name):
 # --------------------------------------------------------------
 # Run assistant
 # --------------------------------------------------------------
-def run_assistant(thread):
+def run_assistant(thread, assistant_id):
     # Retrieve the Assistant
-    assistant = client.beta.assistants.retrieve("asst_7Wx2nQwoPWSf710jrdWTDlfE")
+    assistant = client.beta.assistants.retrieve(assistant_id)
 
     # Run the assistant
     run = client.beta.threads.runs.create(
         thread_id=thread.id,
         assistant_id=assistant.id,
     )
+    
 
     # Wait for completion
     while run.status != "completed":
         # Be nice to the API
+        print("made it here1")
         time.sleep(0.5)
         run = client.beta.threads.runs.retrieve(thread_id=thread.id, run_id=run.id)
+
+    print("made it here")
 
     # Retrieve the Messages
     messages = client.beta.threads.messages.list(thread_id=thread.id)
@@ -116,10 +121,10 @@ def run_assistant(thread):
 # Test assistant
 # --------------------------------------------------------------
 
-new_message = generate_response("Como faço para implementar uma IA no meu negócio?", "123", "John")
+new_message = generate_response("koman ou ye?", "123", "John", "asst_AQA7RpQAvlQrF6JFbU3f1eUu")
 
-new_message = generate_response("What's the pin for the lockbox?", "456", "Sarah")
+# new_message = generate_response("What's the pin for the lockbox?", "456", "Sarah")
 
-new_message = generate_response("What was my previous question?", "123", "John")
+# new_message = generate_response("What was my previous question?", "123", "John")
 
-new_message = generate_response("What was my previous question?", "456", "Sarah")
+# new_message = generate_response("What was my previous question?", "456", "Sarah")

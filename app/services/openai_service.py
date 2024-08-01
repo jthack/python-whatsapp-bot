@@ -11,11 +11,11 @@ OPENAI_ASSISTANT_ID = os.getenv("OPENAI_ASSISTANT_ID")
 client = OpenAI(api_key=OPENAI_API_KEY)
 
 
-def upload_file(path):
-    # Upload a file with an "assistants" purpose
-    file = client.files.create(
-        file=open("../../data/t3a_knowledge.txt", "rb"), purpose="assistants"
-    )
+# def upload_file(path):
+#     # Upload a file with an "assistants" purpose
+#     file = client.files.create(
+#         file=open("../../data/t3a_knowledge.txt", "rb"), purpose="assistants"
+#     )
 
 
 def create_assistant(file):
@@ -23,11 +23,11 @@ def create_assistant(file):
     You currently cannot set the temperature for Assistant via the API.
     """
     assistant = client.beta.assistants.create(
-        name="Agente de Atendimento Trinity IA",
-        instructions="Você é um assistente prestativo do WhatsApp que pode ajudar os clientes de nossa empresa de Inteligência Artificial T3A. Seu nome é Trinity. Use sua base de conhecimento para melhor responder às dúvidas dos clientes. Se você não souber a resposta, diga simplesmente que não pode ajudar com perguntas e conselhos para entrar em contato diretamente com o suporte humano. Seja amigável.",
-        tools=[{"type": "retrieval"}],
+        name="Zowobo",
+        instructions="Zowobo is a WhatsApp assistant designed to give Haitians access to AI technology. It can listen to voice messages and respond in Haitian Creole. Zowobo is here to answer questions, provide information, and help with various issues. If there's something it doesn't know, it will clearly say so and suggest seeking help elsewhere. Zowobo always tries to give simple, useful, and easy-to-understand responses. It has a bit of a sense of humor too, but its main goal is to help Haitians access knowledge and information through AI technology. Zowobo responds to haitian creole with haitian creole and responds to english with english. Most requests will be in Haitian creole. Zowobo se yon asistan WhatsApp ki la pou ede Ayisyen yo jwenn aksè ak teknoloji AI. Li kapab tande mesaj vwa epi reponn yo nan lang kreyòl ayisyen. Zowobo la pou reponn kesyon, bay enfòmasyon, epi ede ak divès kalite pwoblèm. Si gen yon bagay li pa konnen, l ap di sa klè epi sijere moun nan chèche èd lòt kote. Zowobo toujou ap eseye bay repons ki senp, itil, epi ki fasil pou konprann. Li gen yon ti sans imou tou, men prensipal objektif li se ede Ayisyen yo jwenn aksè ak konesans ak enfòmasyon atravè teknoloji AI.",
+        # tools=[{"type": "retrieval"}],
         model="gpt-4o-mini",
-        file_ids=[file.id],
+        # file_ids=[file.id],
     )
     return assistant
 
@@ -58,8 +58,9 @@ def run_assistant(thread, name):
     # https://platform.openai.com/docs/assistants/how-it-works/runs-and-run-steps#:~:text=under%20failed_at.-,Polling%20for%20updates,-In%20order%20to
     while run.status != "completed":
         # Be nice to the API
-        time.sleep(0.5)
+        time.sleep(1)
         run = client.beta.threads.runs.retrieve(thread_id=thread.id, run_id=run.id)
+        print(str(run))
 
     # Retrieve the Messages
     messages = client.beta.threads.messages.list(thread_id=thread.id)

@@ -36,6 +36,7 @@ def send_whatsapp_message():
         "template": {"name": "hello_world", "language": {"code": "en_US"}},
     }
     response = requests.post(url, headers=headers, json=data)
+    print(str(response))
     return response
 
 

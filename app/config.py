@@ -16,6 +16,7 @@ def load_configurations(app):
     app.config["VERSION"] = os.getenv("VERSION")
     app.config["PHONE_NUMBER_ID"] = os.getenv("PHONE_NUMBER_ID")
     app.config["VERIFY_TOKEN"] = os.getenv("VERIFY_TOKEN")
+    app.config["GEMINI_API_KEY"] = os.getenv("GEMINI_API_KEY")
     
     # Set debug mode based on environment
     app.config["DEBUG"] = os.getenv("FLASK_DEBUG", "false").lower() in ["true", "1", "t"]

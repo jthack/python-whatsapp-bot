@@ -6,9 +6,71 @@ import json
 import requests
 import whisper
 import re
+import google.generativeai as genai
+from google.generativeai.types import HarmCategory, HarmBlockThreshold
+
 from app.services.openai_service import generate_response
 
 model = whisper.load_model("base")  # Load the Whisper model
+
+
+def transcribe_audio_with_gemini(audio_path):
+    # Configure the Gemini API
+    api_key = current_app.config['GEMINI_API_KEY']
+    genai.configure(api_key=api_key)
+
+    # Upload the audio file to Gemini
+    def upload_to_gemini(path, mime_type=None):
+        file = genai.upload_file(path, mime_type=mime_type)
+        print(f"Uploaded file '{file.display_name}' as: {file.uri}")
+        return file
+
+    # Create the model
+    generation_config = {
+        "temperature": 1,
+        "top_p": 0.95,
+        "top_k": 64,
+        "max_output_tokens": 8192,
+        "response_mime_type": "text/plain",
+    }
+    safety_settings = {
+        HarmCategory.HARM_CATEGORY_HARASSMENT: HarmBlockThreshold.BLOCK_NONE,
+        HarmCategory.HARM_CATEGORY_HATE_SPEECH: HarmBlockThreshold.BLOCK_NONE,
+        HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT: HarmBlockThreshold.BLOCK_NONE,
+        HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT: HarmBlockThreshold.BLOCK_NONE,
+    }
+    model = genai.GenerativeModel(
+        model_name="gemini-1.5-flash",
+        generation_config=generation_config,
+        safety_settings=safety_settings
+    )
+    model = genai.GenerativeModel(
+        model_name="gemini-1.5-flash",
+        generation_config=generation_config,
+    )
+
+    # Upload the audio file
+    mime_type = "audio/ogg" if audio_path.endswith('.ogg') else "audio/mpeg"
+    uploaded_file = upload_to_gemini(audio_path, mime_type=mime_type)
+
+    # Start a chat session and send the transcription request
+    chat_session = model.start_chat(
+        history=[
+            {
+                "role": "user",
+                "parts": [
+                    uploaded_file,
+                    "Transcribe this audio file of a Haitian Creole speaker into Haitian Creole text. No additional comments before or after. Just the transcription.",
+                ],
+            },
+        ]
+    )
+
+    # Get the response
+    response = chat_session.send_message("Transcribe the audio")
+    
+    return response.text
+
 
 def log_http_response(response):
     logging.info(f"Status: {response.status_code}")
@@ -46,6 +108,7 @@ def send_message(data):
         requests.RequestException
     ) as e:  # This will catch any general request exception
         logging.error(f"Request failed due to: {e}")
+        logging.error(f"Request failed due to: {str(response.json)}")
         return jsonify({"status": "error", "message": "Failed to send message"}), 500
     else:
         # Process the response as normal
@@ -105,7 +168,6 @@ def process_whatsapp_audio_message(body):
                 logging.error("File path not found in the voice message")
                 return jsonify({"status": "error", "message": "File path not found in the voice message"}), 400
 
-            # Assuming the file path provided is internal and needs to be accessed differently
             audio_path = download_audio_file_internal(audio_file_path)
             if not audio_path:
                 logging.error("Failed to download audio file from internal path")
@@ -118,7 +180,6 @@ def process_whatsapp_audio_message(body):
                 logging.error("ID key not found in the audio message")
                 return jsonify({"status": "error", "message": "ID key not found in the audio message"}), 400
 
-            # Get the audio URL using the ID
             audio_url, mime_type = get_audio_url(audio_id)
             if not audio_url:
                 logging.error("Failed to retrieve audio URL")
@@ -126,7 +187,6 @@ def process_whatsapp_audio_message(body):
 
             logging.info(f"Retrieved audio URL: {audio_url}")
 
-            # Download the audio file
             audio_path = download_audio_file(audio_url, mime_type)
             if not audio_path:
                 logging.error("Failed to download audio file")
@@ -136,14 +196,8 @@ def process_whatsapp_audio_message(body):
             logging.error("Audio key not found in the message")
             return jsonify({"status": "error", "message": "Audio key not found in the message"}), 400
 
-        # Convert the audio file to WAV format
-        wav_path = convert_to_wav(audio_path)
-        if not wav_path:
-            logging.error("Failed to convert audio file to WAV format")
-            return jsonify({"status": "error", "message": "Failed to convert audio file to WAV format"}), 400
-
-        # Transcribe the audio file using Whisper
-        transcription = transcribe_audio_file(wav_path)
+        # Use Google Gemini Flash for transcription
+        transcription = transcribe_audio_with_gemini(audio_path)
 
         # Generate a response using GPT-4
         response = generate_response(transcription, wa_id, name)
@@ -155,7 +209,6 @@ def process_whatsapp_audio_message(body):
 
         # Clean up audio files
         os.remove(audio_path)
-        os.remove(wav_path)
 
     except Exception as e:
         logging.error(f"Error processing audio message: {e}")
